@@ -1,3 +1,5 @@
+require_relative 'assertion'
+
 module LookLike
   class Runner
     @@SCRIPT_PATH = "./config/script.rb"
