@@ -3,7 +3,7 @@ require 'json'
 require_relative 'service'
 
 before do
-  content_type 'text/html', :charset => 'utf-8'
+  content_type 'text/html'
   headers 'Access-Control-Allow-Origin' => '*',
           'Access-Control-Allow-Methods' => ['OPTIONS', 'GET', 'POST','PUT'],
           'Access-Control-Allow-Headers' => ['Content-Type', "x-requested-with", "origin"]
