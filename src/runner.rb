@@ -22,7 +22,7 @@ module LookLike
         __proc = Proc.new {}
         eval(@script, __proc.binding)
       rescue Exception => se
-        return se.message
+        return [se.message]
       end
       @report
     end

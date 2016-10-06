@@ -14,5 +14,11 @@ describe LookLike::Service do
     actual    = LookLike::Service.execute(script)
     expect(actual).to eq(expected)
   end
+  it "support negating assertions" do
+    expected  = ["Did not expect    :\"one@two.xyz\" to look like  : \"email\" (email)"]
+    script    = 'expect("one@two.xyz").not_to look_like("email")'
+    actual    = LookLike::Service.execute(script)
+    expect(actual).to eq(expected)
+  end
 
 end
