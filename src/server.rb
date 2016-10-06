@@ -16,5 +16,5 @@ end
 
 put '/assertion/evaluate' do
   content_type 'text/plain'
-  LookLike::Service.execute(request.body.read).to_json
+  LookLike::Service.execute(request.body.read)
 end
