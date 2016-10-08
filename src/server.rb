@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'json'
 require_relative 'service'
+require 'uri'
 
 before do
   content_type 'text/html'
@@ -17,5 +18,5 @@ end
 put '/assertion/evaluate' do
   content_type 'text/plain'
   script = request.body.read
-  LookLike::Service.execute(script).join("<---->")
+  URI.escape(LookLike::Service.execute(script).join("<---->"))
 end
